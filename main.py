@@ -1,23 +1,15 @@
 from bakery import assert_equal
-from drafter import *
 from dataclasses import dataclass
 
-
-
+set_website_title("Òleo Gentlemen’s Salon")
+set_site_information(
+    author="Jaxon Vaughan",
+    description="This website is a schedualr that allows you to choose a barber, 
+    select a time and date, along with the abuility to reschedual or cancle the 
+    apointment.",
+    sources="Òleo Gentlemen’s Salon in selbyvile delaware",
+    links=["https://github.com/Jaxonvau/Barber-Shop-Schedualer-Project"]
+)
 hide_debug_information()
-set_website_title("Your Drafter Website")
 set_website_framed(False)
 
-
-@dataclass
-class State:
-    pass
-
-
-@route
-def index(state: State) -> Page:
-    return Page(state, ["Hello World!"])
-
-assert_equal(index(State()), Page(State(), ["Hello World!"]))
-
-start_server(State())
