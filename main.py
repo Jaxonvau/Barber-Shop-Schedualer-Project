@@ -1,6 +1,5 @@
 from dataclasses import dataclass
-from drafter import Page, Button, TextBox, SelectBox, route, start_server
-from drafter import set_website_title, set_site_information, hide_debug_information, set_website_framed
+from drafter import *
 from bakery import assert_equal
 
 set_website_title("Òleo Gentlemen’s Salon")
