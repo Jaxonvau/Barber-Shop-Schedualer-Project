@@ -7,7 +7,7 @@ set_site_information(
     author="Jaxon Vaughan",
     description="schedual an apointment to get your hair cut.",
     sources="Thanks to the oleo gentalmans salon.",
-    planning=["plan.pdf", "design.pdf"],
+    planning=["FinalProject.py", "Barber.pdf"],
     links=["https://github.com/Jaxonvau/Barber-Shop-Schedualer-project"]
 )
 hide_debug_information()
