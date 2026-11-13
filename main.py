@@ -203,17 +203,7 @@ assert_equal(available(test_appointments, "Julien", "2026-12-01", "9:00 AM", -1)
 assert_equal(available(test_appointments, "Jostin", "2026-12-01", "9:00 AM", 0), True)
 assert_equal(update_appointment(test_appointments, 0, "2026-12-02", "10:00 AM"), [Appointment("Alex", "Jostin", "2026-12-02", "10:00 AM")])
 
-# starting the server
-start_server(State(
-    customer_names="",
-    selected_barber="Jostin",
-    selected_date="",
-    appointments=[],
-    selected_time="9:00 AM",
-    selected_appointment=-1,
-    message=""
-))
-    
+
 
 
 
