@@ -2,17 +2,16 @@ from dataclasses import dataclass
 from drafter import *
 from bakery import assert_equal
 
-set_website_title("Òleo Gentlemen’s Salon")
+set_website_title("Oleo Gentlemen’s Salon")
 set_site_information(
     author="Jaxon Vaughan",
-    description="This website is a schedualr that allows you to choose a barber, select a time and date, along with the abuility to reschedual or cancle the apointment.",
-    planing= " barber appointment website baseed on the shop i go to.",
-    sources="Òleo Gentlemen’s Salon in selbyvile delaware",
-    links=["https://github.com/Jaxonvau/Barber-Shop-Schedualer-Project"]
+    description="schedual an apointment to get your hair cut.",
+    sources="Thanks to the oleo gentalmans salon.",
+    planning=["plan.pdf", "design.pdf"],
+    links=["https://github.com/Jaxonvau/Barber-Shop-Schedualer-project"]
 )
 hide_debug_information()
 set_website_framed(False)
-
 
 @dataclass
 class Appointment:
@@ -202,6 +201,17 @@ assert_equal(available(test_appointments, "Jostin", "2026-12-01", "9:00 AM", -1)
 assert_equal(available(test_appointments, "Julien", "2026-12-01", "9:00 AM", -1), True)
 assert_equal(available(test_appointments, "Jostin", "2026-12-01", "9:00 AM", 0), True)
 assert_equal(update_appointment(test_appointments, 0, "2026-12-02", "10:00 AM"), [Appointment("Alex", "Jostin", "2026-12-02", "10:00 AM")])
+
+start_server(State(
+    customer_names="",
+    selected_barber="Jostin",
+    selected_date="",
+    appointments=[],
+    selected_time="9:00 AM",
+    selected_appointment=-1,
+    message=""
+))
+
 
 
 
