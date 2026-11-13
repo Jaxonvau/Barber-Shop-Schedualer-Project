@@ -8,7 +8,7 @@ set_site_information(
     description="schedual an apointment to get your hair cut.",
     sources="Thanks to the oleo gentalmans salon.",
     planning=["FinalProject.py", "Barber.pdf"],
-    links=["https://github.com/Jaxonvau/Barber-Shop-Schedualer-project"]
+    links=["https://jaxonvau.github.io/Barber-Shop-Schedualer-Project/"]
 )
 hide_debug_information()
 set_website_framed(False)
